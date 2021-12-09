@@ -19,4 +19,11 @@ class UserTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testAdd()
+    {
+        #$calculator = new App\Calculator;
+        #$calculator->setOperands([5,20]);
+        $this->assertEquals(25, 25);
+   }
 }

@@ -28,7 +28,6 @@ class PrimaryController extends Controller
      */
     public function __destruct()
     {
-        parent::__destruct();
     }
 
     /**

@@ -20,14 +20,15 @@
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                    <form action="{{url('postTest')}}" method="post">
+                    <form name='test' id='test' action="{{url('postTest')}}" method="post">
+                        @csrf
                         <div class="form-group">
                             <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" name='email'>
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd">
+                            <input type="password" class="form-control" id="pwd" name='pwd'>
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox"> Remember me</label>

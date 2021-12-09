@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
+use App\Models\Poll;
 
 /**
  * PrimaryServices
@@ -32,16 +33,17 @@ class PrimaryServices
     }
 
     /**
-     * todo
+     * Create poll
      *
-     * @param string $studyName
-     * @param array $fileContents
+     * @param string $pollTitle
      * @return string
      */
-    public function dummyMethods($studyName, $fileContents)
+    public function createPoll($pollTitle)
     {
         try {
-
+            $poll = new Poll();
+            $poll->title($pollTitle);
+            $poll->save();
         } catch (Exception $exception) {
             Log::error("Exception occurred: ".$exception);
         }

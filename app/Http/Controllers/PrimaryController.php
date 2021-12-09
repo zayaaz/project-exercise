@@ -48,8 +48,8 @@ class PrimaryController extends Controller
      */
     public function savePollOptions(Request $request)
     {
-        Log::info($request->all());
-        dd();
+        $pollTile = $request->input('title');
+        $this->primaryServices->createPoll($pollTile);
         return redirect('/')->with('status', 'The poll stored successfully !!!');
     }
 

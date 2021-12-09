@@ -14,3 +14,4 @@ use App\Http\Controllers\PrimaryController;
 |
 */
 Route::get('/', [PrimaryController::class, 'index']);
+Route::post('/', [PrimaryController::class, 'postTest']);

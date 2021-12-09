@@ -39,4 +39,15 @@ class PrimaryController extends Controller
     {
         return view('welcome');
     }
+
+    /**
+     * Display main landing page
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postTest(Request $request)
+    {
+        Log::info($request->all());
+        Log::info('tesst');
+    }
 }

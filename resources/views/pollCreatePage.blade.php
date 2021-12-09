@@ -19,22 +19,23 @@
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                    <form name='test' id='test' action="{{url('postTest')}}" method="post">
+                    <h1> Add new poll </h1><hr/>
+                    <form name='test' id='test' action="{{ url('pollCreate') }}" method="post">
+                        @csrf
                         <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email" name='email'>
+                            <label for="title">Title:</label>
+                            <input type="text" class="form-control" id="title" name='title'>
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd" name='pwd'>
+                            <label for="description">Poll options</label>
+                            <textarea class="form-control" id="description" rows="3"></textarea>
                         </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Save</button>
                     </form>
                 </div>
                 <div class="col-sm-4"></div>
             </div>
     </body>
 </html>
+
+

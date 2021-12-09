@@ -15,3 +15,10 @@ use App\Http\Controllers\PrimaryController;
 */
 Route::get('/', [PrimaryController::class, 'index']);
 Route::post('/postTest', [PrimaryController::class, 'postTest']);
+
+# Poll routes
+Route::get('/pollCreate', [PrimaryController::class, 'displayPollCreatePage']);
+Route::post('/pollCreate', [PrimaryController::class, 'savePollOptions']);
+
+Route::get('/poll', [PrimaryController::class, 'displayPoll']);
+Route::post('/poll', [PrimaryController::class, 'submitPoll']);

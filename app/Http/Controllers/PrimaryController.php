@@ -30,6 +30,30 @@ class PrimaryController extends Controller
     {
     }
 
+
+    /**
+     * Display main landing page
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function displayPollCreatePage(Request $request)
+    {
+        return view('pollCreatePage');
+    }
+
+    /**
+     * Create or edit the poll
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function savePollOptions(Request $request)
+    {
+        Log::info($request->all());
+        dd();
+        return redirect('/')->with('status', 'The poll stored successfully !!!');
+    }
+
+
     /**
      * Display main landing page
      * @param  \Illuminate\Http\Request  $request

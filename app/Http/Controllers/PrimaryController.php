@@ -49,5 +49,6 @@ class PrimaryController extends Controller
     {
         Log::info($request->all());
         Log::info('tesst');
+        return redirect('/')->with('status', 'Blog Post Form Data Has Been inserted');
     }
 }

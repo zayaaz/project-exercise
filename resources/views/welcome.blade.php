@@ -16,7 +16,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-            <div class="row"></div>
+        <div class="row">  
+            @if(session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
+        </div>
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
